@@ -1,0 +1,99 @@
+:root {
+  --bg: #0d0d14;
+  --surface: #14141f;
+  --surface-2: #1c1c2a;
+  --surface-3: #242438;
+  --border: #2c2c42;
+  --primary: #6c63ff;
+  --primary-light: #9b94ff;
+  --primary-dim: rgba(108,99,255,0.15);
+  --correct: #4ade80;
+  --incorrect: #f87171;
+  --pending: #4a4a6a;
+  --accent-yellow: #fbbf24;
+  --accent-red: #ef4444;
+  --text: #e8e8f5;
+  --text-muted: #8888aa;
+  --text-dim: #55556a;
+  font-family: 'Inter', sans-serif;
+}
+
+html, body {
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100%;
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--primary-light);
+}
+
+/* Typography for keyboard text and monospace areas */
+.keyboard,
+.wpm,
+.score {
+  font-family: 'Space Mono', monospace;
+}
+
+/* Button styling */
+button {
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.6em 1.4em;
+  font-size: 1rem;
+  font-family: 'Inter', sans-serif;
+  cursor: pointer;
+  transition: box-shadow 0.13s, transform 0.13s;
+}
+button:hover,
+button:focus {
+  transform: translateY(-2px);
+  box-shadow: 0 2px 16px 0 var(--primary-dim);
+}
+
+/* Utility classes */
+.muted {
+  color: var(--text-muted);
+}
+
+.bold {
+  font-weight: 700;
+}
+
+/* Animations (used in all apps/games/pages) */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes shake {
+  10%, 90% { transform: translateX(-4px); }
+  20%, 80% { transform: translateX(4px); }
+  30%, 50%, 70% { transform: translateX(-8px); }
+  40%, 60% { transform: translateX(8px); }
+}
+
+@keyframes starBounce {
+  0%   { transform: scale(0); }
+  70%  { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
